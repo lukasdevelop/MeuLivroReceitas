@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\MeuLivroReceitas.Comunicacao\MeuLivroReceitas.Comunicacao.csproj" />
+    <ProjectReference Include="..\..\Shared\MeuLivroReceitas.Expections\MeuLivroReceitas.Expections.csproj" />
+    <ProjectReference Include="..\MeuLivroReceitas.Domain\MeuLivroReceitas.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
