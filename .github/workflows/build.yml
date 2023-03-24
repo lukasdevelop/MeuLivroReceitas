@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - develop
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
@@ -44,5 +45,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"lukasdevelop_MeuLivroReceitas2" /o:"lukasdevelop-1" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -1 trx 
+         
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
